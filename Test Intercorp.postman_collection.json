@@ -1,0 +1,85 @@
+{
+	"info": {
+		"_postman_id": "f3281829-1de9-4d76-9989-bb82d03135c4",
+		"name": "Test Intercorp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create customer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"Juan\",\n    \"surname\":\"Rebatta\",\n    \"email\":\"juan@intercorp.com\",\n    \"dni\":\"87654321\",\n    \"birthDate\":\"1990-01-10\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/customers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find customers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/customers?dni=87&email=ju",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customers"
+					],
+					"query": [
+						{
+							"key": "dni",
+							"value": "87"
+						},
+						{
+							"key": "email",
+							"value": "ju"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Indicators",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/indicators",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"indicators"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
